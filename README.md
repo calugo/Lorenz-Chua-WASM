@@ -6,6 +6,16 @@ By far my favorite JS library to display results of simulations is [three.js](ht
 
 Four files are provided two codes for standalone compilation and two used to compile using emcc for usage in on-line live demos.
 
+The results of these experiments can be live played with here:
+
+[Lorenz live demo](https://calugo.github.io/Lorenz-Chua-WASM/Lorenz.html)
+
+
+[Chua live demo](https://calugo.github.io/Lorenz-Chua-WASM/Chua.html)
+
+A legacy jupyter notebook, is also in the repository, it has some code to make pretty figures. All these code was originally inspired by the Open Plant initiative. 
+
+
 ## Standalone codes.
 
 ### Lorenz equations:
