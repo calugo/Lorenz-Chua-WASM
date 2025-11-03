@@ -202,7 +202,7 @@
 				geom.setAttribute( 'position', new THREE.Float32BufferAttribute( pointsxyz, 3 ) );
 				geom.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 				geom.computeBoundingSphere();
-				const pMaterial =  new THREE.PointsMaterial( { size: 0.05, vertexColors: true } );
+				const pMaterial =  new THREE.PointsMaterial( { size: 0.15, vertexColors: true } );
 
 				let points = new THREE.Points( geom, pMaterial );
 				scenes[0].add( points );
@@ -504,10 +504,10 @@
 
 					const camera = scene.userData.camera;
 
-					//camera.aspect = width / height; // not changing in this example
-					//camera.updateProjectionMatrix();
+					camera.aspect = width / height; // not changing in this example
+					camera.updateProjectionMatrix();
 
-					//scene.userData.controls.update();
+					scene.userData.controls.update();
 
 					renderer.render( scene, camera );
 
