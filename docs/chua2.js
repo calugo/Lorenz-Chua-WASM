@@ -351,7 +351,7 @@ function initMeshes() {
 		geom.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 		geom.computeBoundingSphere();
 		const pMaterial =  new THREE.PointsMaterial( { size: 0.1, vertexColors: true } );
-		const pMaterialt =  new THREE.PointsMaterial( { size: 1.5, vertexColors: true } );
+		const pMaterialt =  new THREE.PointsMaterial( { size: 2.5, vertexColors: true } );
 
 		let points = new THREE.Points( geom, pMaterial );
 		scenes[1].add( points );
