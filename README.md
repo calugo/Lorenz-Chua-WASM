@@ -8,10 +8,12 @@ Four files are provided two codes for standalone compilation and two used to com
 
 The results of these experiments can be live played with here:
 
-[Lorenz live demo](https://calugo.github.io/Lorenz-Chua-WASM/Lorenz.html)
+[Lorenz live demo1](https://calugo.github.io/Lorenz-Chua-WASM/Lorenz.html)
+[Lorenz live demo2](https://calugo.github.io/Lorenz-Chua-WASM/Lorenz2.html)
 
 
-[Chua live demo](https://calugo.github.io/Lorenz-Chua-WASM/Chua.html)
+[Chua live demo1](https://calugo.github.io/Lorenz-Chua-WASM/Chua.html)
+[Chua live demo2](https://calugo.github.io/Lorenz-Chua-WASM/Chua2.html)
 
 A legacy jupyter notebook, is also in the repository, it has some code to make pretty figures. All these code was originally inspired by the Open Plant initiative. 
 
