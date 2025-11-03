@@ -202,7 +202,7 @@
 				geom.setAttribute( 'position', new THREE.Float32BufferAttribute( pointsxyz, 3 ) );
 				geom.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 				geom.computeBoundingSphere();
-				const pMaterial =  new THREE.PointsMaterial( { size: 0.1, vertexColors: true } );
+				const pMaterial =  new THREE.PointsMaterial( { size: 0.05, vertexColors: true } );
 				const pMaterialt =  new THREE.PointsMaterial( { size: 1.5, vertexColors: true } );
 
 				let points = new THREE.Points( geom, pMaterial );
