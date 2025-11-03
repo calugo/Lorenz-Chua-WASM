@@ -196,7 +196,7 @@ function RK(){
 	var result = new Float64Array(dataHeap.buffer, dataHeap.byteOffset, rn.length);
 				
 	/////
-	console.log(scenes[0].children)
+	//console.log(scenes[0].children)
 	let n=0;
 	let U = scenes[1].children[3].geometry.attributes.position
 	let VX = scenes[0].children[3].geometry.attributes.position
@@ -311,7 +311,7 @@ function initMeshes() {
 					const gXYZ = new THREE.ShapeGeometry(XYZsh);
 					const textXYZ = new THREE.Mesh(gXYZ,textMaterial);
 
-					textT.position.set(35.5,-11.1,0);
+					textT.position.set(55.5,-11.1,0);
 					textXYZ.position.set(-45,-2.0,0);
 
 					scenes[0].add(textT)					
@@ -440,9 +440,9 @@ function animate() {
 				M1.setXYZ(0,T[k]-nx0,X[k]-Mx-ny0,0.0);
 				M2.setXYZ(0,T[k]-nx0,Y[k]-My-ny0,0.0);
 				M3.setXYZ(0,T[k]-nx0,Z[k]-Mz-ny0,0.0);
-				//scene.children[6].geometry.computeBoundingSphere();
-				//scenes[1].children[7].geometry.computeBoundingSphere();
-				//scenes[1].children[8].geometry.computeBoundingSphere();
+				scene.children[6].geometry.computeBoundingSphere();
+				scene.children[7].geometry.computeBoundingSphere();
+				scene.children[8].geometry.computeBoundingSphere();
 				M1.needsUpdate = true;
 				M2.needsUpdate = true;
 				M3.needsUpdate = true;

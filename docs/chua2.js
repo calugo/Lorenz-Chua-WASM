@@ -19,7 +19,7 @@ let RN = 0.0;
 const nx0 = 45.0 
 const ny0 = 10;
 const nx1 = 0.0;  
-const ny1 = 20.0;
+const ny1 = 9.0;
 ///////////////
 const Np = 10001;
 const NL = 3*Np;
@@ -95,9 +95,9 @@ function init() {
 		if (i==1){
 
 			const camera = new THREE.PerspectiveCamera( 50, 1, 1, 300 );
-			camera.position.x = 30+ny1;
-			camera.position.y = 30+ny1;
-			camera.position.z = 30+ny1;
+			camera.position.x = -22+ny1;
+			camera.position.y = 22+ny1;
+			camera.position.z = 19+ny1;
 		
 			scene.userData.camera = camera;
 			scene.background = new THREE.Color( 0x000000 );
@@ -202,7 +202,7 @@ function RK(){
 	var result = new Float64Array(dataHeap.buffer, dataHeap.byteOffset, rn.length);
 				
 	/////
-	console.log(scenes[0].children)
+	//console.log(scenes[0].children)
 	let n=0;
 	let U = scenes[1].children[3].geometry.attributes.position
 	let VX = scenes[0].children[3].geometry.attributes.position
@@ -273,7 +273,7 @@ function initMeshes() {
 
 
 		///// Axes Scene 1
-		const axesHelper = new THREE.AxesHelper(20);
+		const axesHelper = new THREE.AxesHelper(8);
 		const axcolor = new THREE.Color(0xc2bfc9);
 		axesHelper.setColors(axcolor,axcolor,axcolor);
 		axesHelper.translateY(ny1);
@@ -299,9 +299,9 @@ function initMeshes() {
 					const gZ = new THREE.ShapeGeometry(Zsh);
 					const textZ = new THREE.Mesh(gZ,textMaterial);
 
-					textX.position.set(20,ny1,0);
-					textY.position.set(0,20+ny1,0);
-					textZ.position.set(0,ny1,20);
+					textX.position.set(8,ny1,0);
+					textY.position.set(0,8+ny1,0);
+					textZ.position.set(0,ny1,8);
 					
 					scenes[1].add(textX);
 					scenes[1].add(textY);
@@ -317,7 +317,7 @@ function initMeshes() {
 					const gXYZ = new THREE.ShapeGeometry(XYZsh);
 					const textXYZ = new THREE.Mesh(gXYZ,textMaterial);
 
-					textT.position.set(35.5,-11.1,0);
+					textT.position.set(55.5,-11.1,0);
 					textXYZ.position.set(-45,-2.0,0);
 
 					scenes[0].add(textT)					
@@ -446,9 +446,9 @@ function animate() {
 				M1.setXYZ(0,T[k]-nx0,X[k]-Mx-ny0,0.0);
 				M2.setXYZ(0,T[k]-nx0,Y[k]-My-ny0,0.0);
 				M3.setXYZ(0,T[k]-nx0,Z[k]-Mz-ny0,0.0);
-				//scene.children[6].geometry.computeBoundingSphere();
-				//scenes[1].children[7].geometry.computeBoundingSphere();
-				//scenes[1].children[8].geometry.computeBoundingSphere();
+				scene.children[6].geometry.computeBoundingSphere();
+				scene.children[7].geometry.computeBoundingSphere();
+				scene.children[8].geometry.computeBoundingSphere();
 				M1.needsUpdate = true;
 				M2.needsUpdate = true;
 				M3.needsUpdate = true;
