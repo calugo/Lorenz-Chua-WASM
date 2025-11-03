@@ -202,7 +202,8 @@
 				geom.setAttribute( 'position', new THREE.Float32BufferAttribute( pointsxyz, 3 ) );
 				geom.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 				geom.computeBoundingSphere();
-				const pMaterial =  new THREE.PointsMaterial( { size: 0.15, vertexColors: true } );
+				const pMaterial =  new THREE.PointsMaterial( { size: 0.1, vertexColors: true } );
+				const pMaterialt =  new THREE.PointsMaterial( { size: 1.5, vertexColors: true } );
 
 				let points = new THREE.Points( geom, pMaterial );
 				scenes[0].add( points );
@@ -217,9 +218,9 @@
 				SolY.setAttribute( 'color', new THREE.Float32BufferAttribute( Cy, 3 ) );
 				SolZ.setAttribute( 'color', new THREE.Float32BufferAttribute( Cz, 3 ) );
 
-				let pX = new THREE.Points( SolX, pMaterial );
-				let pY = new THREE.Points( SolY, pMaterial );
-				let pZ = new THREE.Points( SolZ, pMaterial );
+				let pX = new THREE.Points( SolX, pMaterialt );
+				let pY = new THREE.Points( SolY, pMaterialt );
+				let pZ = new THREE.Points( SolZ, pMaterialt );
 				scenes[1].add(pX);scenes[1].add(pY);scenes[1].add(pZ);
 
 				ptx.push(0.0,0.0,0.0);
@@ -507,7 +508,7 @@
 					camera.aspect = width / height; // not changing in this example
 					camera.updateProjectionMatrix();
 
-					scene.userData.controls.update();
+					//scene.userData.controls.update();
 
 					renderer.render( scene, camera );
 
