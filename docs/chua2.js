@@ -366,9 +366,9 @@ function initMeshes() {
 		SolY.setAttribute( 'color', new THREE.Float32BufferAttribute( Cy, 3 ) );
 		SolZ.setAttribute( 'color', new THREE.Float32BufferAttribute( Cz, 3 ) );
 
-		let pX = new THREE.Points( SolX, pMaterial );
-		let pY = new THREE.Points( SolY, pMaterial );
-		let pZ = new THREE.Points( SolZ, pMaterial );
+		let pX = new THREE.Points( SolX, pMaterialt );
+		let pY = new THREE.Points( SolY, pMaterialt );
+		let pZ = new THREE.Points( SolZ, pMaterialt );
 		scenes[0].add(pX);scenes[0].add(pY);scenes[0].add(pZ);
 
 		ptx.push(0.0,0.0+ny1,0.0);
